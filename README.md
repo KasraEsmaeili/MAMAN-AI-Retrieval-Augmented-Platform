@@ -143,6 +143,57 @@ This project demonstrates applied AI system design in a real-world context, incl
 - Scalable backend orchestration of external AI services
 
 ---
+## Design Decisions and Trade-offs
+
+### Why Retrieval-Augmented Generation Instead of Fine-Tuning
+
+The system uses a Retrieval-Augmented Generation approach rather than fine-tuning a domain-specific model. This decision was made to:
+
+- Allow dynamic updates to parenting resources without retraining
+- Maintain flexibility in modifying or expanding the knowledge base
+- Reduce infrastructure and training costs
+- Improve transparency by grounding responses in retrieved content
+
+RAG enables knowledge updates at the data layer rather than the model layer, making the system more maintainable and scalable.
+
+### API-Based Model Integration vs Self-Hosted Models
+
+The platform integrates Azure-hosted LLM APIs instead of deploying local models. This trade-off prioritizes:
+
+- Production stability
+- Scalability under variable user load
+- Reduced operational overhead
+- Faster iteration during early-stage system development
+
+This approach sacrifices full model control but enables rapid deployment and real-world validation.
+
+### Personalization Injection Strategy
+
+Personalization is injected at the backend orchestration layer before prompt construction. Child profile data, including developmental stage and optional care notes, are appended as contextual signals to influence retrieval and response generation.
+
+This design ensures that personalization modifies both retrieval relevance and final response tone, rather than only altering the final generation step.
+
+### Chunking Strategy
+
+Parenting resources are segmented into semantically coherent chunks suitable for embedding and similarity search. Chunking balances two competing factors:
+
+- Larger chunks preserve contextual completeness
+- Smaller chunks improve retrieval precision
+
+The selected chunk size was optimized to maintain conceptual integrity while maximizing semantic retrieval quality.
+
+### System Modularity
+
+The architecture separates:
+
+- User interface
+- Backend orchestration
+- Embedding and retrieval infrastructure
+- Generation component
+
+This modularity allows future migration to alternative embedding models, vector stores, or LLM providers without redesigning the entire application layer.
+
+---
 
 ## Screenshots
 
