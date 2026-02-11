@@ -208,6 +208,28 @@ This modularity allows future migration to alternative embedding models, vector 
 
 ---
 
+## Limitations and Future Work
+
+### Current Limitations
+
+- Retrieval quality depends heavily on chunk segmentation and embedding quality.
+- The system currently relies on similarity-based top-k retrieval without advanced re-ranking.
+- Evaluation is primarily qualitative and iterative rather than benchmark-driven.
+- Model behavior is constrained through prompt engineering rather than domain-specific fine-tuning.
+- As an API-based architecture, the system depends on external model availability and pricing stability.
+
+### Future Work
+
+- Implement automated evaluation metrics for response grounding and relevance.
+- Introduce hybrid retrieval methods combining semantic and keyword-based search.
+- Explore lightweight fine-tuning for improved domain consistency.
+- Add retrieval re-ranking mechanisms to improve precision.
+- Investigate self-hosted model deployment for greater architectural control.
+- Develop structured feedback loops for continuous response improvement.
+
+The system architecture was intentionally designed to support modular upgrades, enabling future experimentation across retrieval strategies, embedding models, and generation components without redesigning the entire application layer.
+
+---
 ## Status
 
 Deployed and publicly accessible.
