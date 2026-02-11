@@ -130,12 +130,14 @@ This project demonstrates applied AI system design in a real-world context, incl
 
 ## Screenshots
 
-Images in `/docs/screenshots/`:
+### Home
+![Home](docs/screenshotshome.png)
 
-- Home interface
-- Chat interface
-- Premium dashboard
-- Child profile management page
+### Premium dashboard
+![Premium Dashboard](docs/screenshots/premium-dashboard.png)
+
+### Child profile management
+![My Kids](docs/screenshots/my-kids-form.png)
 
 ---
 
