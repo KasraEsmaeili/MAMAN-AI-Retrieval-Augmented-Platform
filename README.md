@@ -131,7 +131,7 @@ This project demonstrates applied AI system design in a real-world context, incl
 ## Screenshots
 
 ### Home
-![Home](docs/screenshotshome.png)
+![Home](docs/screenshots/home.png)
 
 ### Premium dashboard
 ![Premium Dashboard](docs/screenshots/premium-dashboard.png)
