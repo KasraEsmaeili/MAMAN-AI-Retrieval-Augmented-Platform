@@ -130,7 +130,7 @@ This project demonstrates applied AI system design in a real-world context, incl
 
 ## Screenshots
 
-Add images in `/docs/screenshots/`:
+Images in `/docs/screenshots/`:
 
 - Home interface
 - Chat interface
