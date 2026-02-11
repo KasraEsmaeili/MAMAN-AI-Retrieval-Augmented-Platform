@@ -47,6 +47,22 @@ The system demonstrates practical implementation of Retrieval-Augmented Generati
 
 ---
 
+## Architecture Diagrams
+
+### System Architecture
+The following diagram illustrates the layered system design and orchestration between the application layer and AI services.
+
+![System Architecture](docs/architecture.png)
+
+### Retrieval-Augmented Generation Workflow
+This diagram details the internal RAG pipeline from user query to grounded response.
+
+![RAG Workflow](docs/rag-workflow.png)
+
+The architecture separates concerns across user interface, backend orchestration, retrieval infrastructure, and generation components. The Wix Velo backend acts as the central coordinator, managing personalization signals, embedding generation, semantic retrieval, structured prompt construction, and response delivery. This layered design enables modularity and scalability while maintaining grounded AI responses.
+
+---
+ 
 ## Retrieval-Augmented Generation Workflow
 
 1. User submits a parenting question through the chat interface.
